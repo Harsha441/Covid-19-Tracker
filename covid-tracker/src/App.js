@@ -31,6 +31,8 @@ class App extends Component {
 		this.fetchWorldwideCasesData();
 	}
 
+	// fetch Worldwide Covid cases data from last 30 days
+
 	fetchWorldwideCasesData = async () => {
 		const url = "https://disease.sh/v3/covid-19/historical/all?lastdays=30";
 		const options = {
@@ -56,6 +58,8 @@ class App extends Component {
 		this.setState({ vaccinationData: fetchedData });
 	};
 
+	// fetch Worldwide Covid cases data
+
 	fetchWorldwideData = async () => {
 		const url = "https://disease.sh/v3/covid-19/all";
 		const options = {
@@ -65,6 +69,8 @@ class App extends Component {
 		const fetchedData = await response.json();
 		this.setState({ countryData: fetchedData });
 	};
+
+	// fetch Covid cases for the selected country
 
 	fetchCountryCases = async () => {
 		const { country } = this.state;
@@ -84,6 +90,8 @@ class App extends Component {
 		}
 	};
 
+	// fetch countries list and data
+
 	fetchCountries = async () => {
 		const url = "https://disease.sh/v3/covid-19/countries";
 		const options = {
@@ -100,6 +108,8 @@ class App extends Component {
 		let sortedData = sortData(data);
 		this.setState({ countriesList: updatedData, tableData: sortedData });
 	};
+
+	// get the data for the selected country
 
 	onChangeCountry = async (event) => {
 		const countryCode = event.target.value;
@@ -159,16 +169,19 @@ class App extends Component {
 							</div>
 
 							<div className="data-container">
+								{/* Total Cases */}
 								<InfoCard
 									title="Cases"
 									cases={prettyPrintStat(cases)}
 									today={numeral(todayCases).format("0.0a")}
 								/>
+								{/* Recovered Cases */}
 								<InfoCard
 									title="Recovered"
 									cases={prettyPrintStat(recovered)}
 									today={numeral(todayRecovered).format("0.0a")}
 								/>
+								{/* Deaths */}
 								<InfoCard
 									title="Deaths"
 									cases={prettyPrintStat(deaths)}
@@ -177,12 +190,14 @@ class App extends Component {
 							</div>
 						</div>
 						<div className="graph-container">
+							{/*Graph */}
 							<LineGraph countryCasesData={countryCasesData} />
 						</div>
 					</div>
 					<div className="app-right">
 						<h2>Live Cases by country</h2>
 						<div className="table-header-container">
+							{/* Table*/}
 							<tr className="table-header">
 								<td></td>
 								<td>Country</td>

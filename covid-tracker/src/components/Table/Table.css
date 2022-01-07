@@ -8,11 +8,6 @@
     border-radius: 15px;
     
 }
-@media screen and (max-width: 768px){
-    .table{
-        height: 500px;
-    }
-}
 
 .table tr {
     display: flex;
@@ -36,12 +31,17 @@
     border-radius: 8px;
     border: 0.5px solid rgb(146, 140, 140)
 }
-.cases-heading{
-    margin-left: 180px;
-    
-}
-.size{
-    font-size: 18px;
-    font-weight: bold;
-    
+
+
+@media screen and (max-width: 768px){
+    .flag-img{
+        width: 50px;
+        height: 35px;
+    }
+    .table {
+        height: 500px;
+    }
+    strong{
+        font-size: 13px;
+    }
 }
