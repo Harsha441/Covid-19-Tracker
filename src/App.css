@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap');
+*{
+  margin: 0;
+}
+
+body{
+  background-color: #e7eaf6;
+  min-height: 100vh;
+  font-family: Lato;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.app-heading{
+  font-family: Lato;
+  font-size: 30px;
+  color: rgb(26, 11, 11);
+}
+.app-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.img{
+  margin-right: 25px;
+}
+
+.dropdown{
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.dropdown option{
+  border-radius: 12px;
+}
+
+
+.app-left{
+  width: 60%;
+}
+
+.app-data-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.data-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.covid-data-container{
+  margin-top: 50px;
+  padding: 20px;
+ 
+}
+.heading{
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(37, 7, 7);
+}
+.flag{
+  height: 80px;
+  width: 130px;
+  border-radius: 10px;
+}
+
+.heading-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+
+.app-right{
+  margin-top: 50px;
+  width: 35%;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+
+.app-right h2{
+  font-size: 22px;
+  margin-left: 10px;
+
+}
+
+.table-header-container{
+  margin-top: 20px;
+  background-color: white;
+}
+.table-header-container tr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.graph-container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.table-header td{
+    border: none;
+    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.graph-container{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 900px){
+  .app-data-container{
+    flex-direction: column;
+  }
+  .app-right{
+    width: 95%;
+  }
+  .app-left{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  .app-header{
+    flex-direction: column;
+  }
+  .app-heading{
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .app-right h2{
+    text-align: center;
+  }
+  .table-header td{
+    font-size: 15px;
+  }
+
+}
